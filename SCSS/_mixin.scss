@@ -1,0 +1,39 @@
+@mixin header-footer { 
+    display: flex; 
+    justify-content: space-between; 
+    background-color: #F2D0A4; 
+    align-items: center; 
+    padding: 10px; 
+    text-decoration: none; 
+} 
+
+
+@mixin display-justspacbetween { 
+    display: flex; 
+    justify-content: space-between; 
+} 
+
+@mixin fontsize-padding ($fontsize, $padding) {
+    font-size: $fontsize; 
+    padding: $padding; 
+}
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin display-justcenter { 
+    display: flex; 
+    justify-content: center; 
+} 
+
+@mixin fontsize-margin ($fontsize, $margin) {
+    font-size: $fontsize; 
+    margin: $margin; 
+}
+
+@mixin fontsize-marginleft {
+    font-size: 20px;
+    margin-left: 20px;
+}
