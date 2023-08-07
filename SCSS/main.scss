@@ -163,6 +163,29 @@ body{
     height: 150px;
 }
 
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.productos {
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+}
+
+.productos{
+    transition: 2s;
+}
+.productos:hover{
+    transform: translate(50px) scale(1);
+}
+
 .d-block{
     @include size (1500px, 620px)
 }
