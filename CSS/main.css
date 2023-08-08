@@ -28,6 +28,11 @@ li {
   font-weight: 600;
 }
 
+.carousel-item {
+  width: 60px;
+  height: 500px;
+}
+
 body {
   margin: 0;
 }
@@ -43,10 +48,10 @@ body {
 .menu-n {
   display: flex;
   align-items: safe;
-  margin: 10px;
   color: black;
   text-decoration: none;
   font-size: 17px;
+  margin: 10px;
 }
 
 .bebidas, .comidas {
