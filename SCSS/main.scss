@@ -6,7 +6,7 @@ header{
 }
 
 .nav-link{
-    color: $black;
+    color: beige;
     text-decoration: none; 
 }
 
@@ -78,6 +78,7 @@ body{
 .sn-p{
     @include fontsize-marginleft;
     margin-bottom: 70px;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -87,14 +88,14 @@ body{
     }
 }
 
-.grid-container{
+.grid-container-1{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
 }
 
 @media only screen and (max-width: 500px) {
-    .grid-container {
+    .grid-container-1 {
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto auto auto;
@@ -195,5 +196,37 @@ body{
 /* FOOTER */
 
 footer{
-    @include header-footer;
+    background-color: $rosa;
+    padding: 1%;
+    color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creditos{
+    font-size: 15px;
+    text-decoration: none;
+    color: beige;
+}
+
+.creditos:hover{
+    color: $rosa;
+}
+
+
+.h1-footer{
+    margin-left: 12px;
+}
+
+.redes{
+    margin-right: 12px;
+}
+
+.li-footer{
+    color: beige;
+}
+
+.li-footer:hover{
+    color: $rosa;
 }
