@@ -32,10 +32,6 @@ body{
     margin: 0;
 }
 
-/* MAIN */
-
-/* MENU */
-
 .form{
     @include display-justcenter;
     align-items: center;
@@ -46,8 +42,6 @@ body{
     height: 30px;
     padding: 5px;
 }
-
-
 
 .b-email{
     background-color: white;
@@ -92,7 +86,7 @@ body{
 @media only screen and (max-width: 500px) {
     .sn-img{
         @include size (400px, 300px);
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 }
 
@@ -159,33 +153,38 @@ body{
     }
 }
 
-/* BEBIDAS FRIAS */
 
-.b-frias{
-    @include fontsize-marginleft;
+.h4-p{
+    font-size:12px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(8, 19, 11);
+    color: beige;
+    margin: 0%;
+    padding: 4px;
 }
 
-/* BEBIDAS FRIAS */
-
-.b-calientes{
-    @extend .b-frias;
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
 }
 
-/* COMIDAS SALADAS */
+@media only screen and (max-width: 500px) {
+    .cards {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      margin: 30px;
+      justify-content: space-around;
+    }
+  }
 
-.c-salados{
-    @extend .b-frias;
+.card{
+    width: 135px;
 }
 
-/* COMIDAS DULCES */
-
-.c-dulces{
-    @extend .b-frias;
-}
-
-.productos{
-    height: 150px;
-}
 
 @keyframes aparecer {
     0% {
@@ -197,17 +196,128 @@ body{
     }
 }
 
-.productos {
+.card{
     animation-duration: 3s;
     animation-name: aparecer;
     animation-iteration-count: initial;
 }
 
-.productos{
+.card{
     transition: 2s;
 }
-.productos:hover{
-    transform: translate(50px) scale(1);
+
+.card:hover{
+    transform: translate(40px) scale(1);
+}
+
+
+.prod{
+    padding: 30px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.cards-in{
+    display: flex;
+    justify-content: center;
+}
+
+.card-in:hover{
+    background-color: bisque;
+}
+
+.card-in{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(82, 73, 73);
+    border-radius: 10px;
+    margin-left: 40px;
+    padding: 5px;
+    width: 170px;
+}
+
+.img-in{
+    display: flex;
+    justify-content: center;
+    width: 135px;
+}
+
+.link-in{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 35px;
+}
+
+.container-comp{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-comp{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.t-comp{
+    display: flex;
+    justify-content: center;
+}
+
+.texto-comp{
+    background-color: rgb(250, 192, 254);
+    padding: 64px;
+}
+
+.img-comp{
+    width: 470px;
+    height: 250px;
+}
+
+
+
+
+
+/*
+.comprar{
+
+}
+
+.card-comp{
+    border: 1px solid rgb(82, 73, 73);
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+}
+
+.img-comp{
+    width: 400px;
+    height: 300px;
+}
+
+.img-comp2{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-self: end;
+}
+
+.t-comp{
+    padding: 30px;
+    font-size: 25px;
+    margin-top: 80px;
+}
+*/
+
+.p-text{
+    @include fontsize-marginleft
 }
 
 .d-block{
