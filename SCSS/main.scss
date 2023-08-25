@@ -1,12 +1,15 @@
 @import './mixin';
 @import './vars';
 
+
+/* HEADER */
+
 header{
     @include header-footer;
 }
 
 .nav-link{
-    color: beige;
+    color: bisque;
     text-decoration: none; 
 }
 
@@ -23,6 +26,8 @@ li{
     @include fontsize-margin (12px, 10px);
     font-weight: 600;
 }
+
+/* MAIN */
 
 .carousel-item{
     @include size (60px, 500px)
@@ -51,6 +56,8 @@ body{
     background-color: bisque;
 }
 
+/* MENU */
+
 .menu{
     font-size: 36px;
     @include display-justcenter;
@@ -71,88 +78,6 @@ body{
 .comidas{
     @extend .bebidas;
 }
-
-/* LINK NOSOTROS */
-
-.s-nosotros{
-    @include fontsize-padding (30px, 10px);
-}
-
-.sn-img{
-    @include size (600px, 400px);
-    margin-bottom: 75px;
-}
-
-@media only screen and (max-width: 500px) {
-    .sn-img{
-        @include size (400px, 300px);
-        margin-bottom: 15px;
-    }
-}
-
-.sn-p{
-    @include fontsize-marginleft;
-    margin-bottom: 70px;
-    margin-top: 20px;
-}
-
-@media only screen and (max-width: 500px) {
-    .sn-p{
-        @include fontsize-margin (15px, 10px);
-        margin-bottom: 50px;
-    }
-}
-
-.grid-container-1{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-}
-
-@media only screen and (max-width: 500px) {
-    .grid-container-1 {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto auto;
-      margin-left: 0px;
-    }
-  }
-
-/* LINK UBICACION */
-
-.p-ubicacion{
-    @include fontsize-padding (30px, 10px);
-}
-
-.p-LP{
-    @include fontsize-margin (18px, 10px);
-}
-
-@media only screen and (max-width: 500px) {
-    .mapa{
-        @include size (370px, 450px);
-        margin-bottom: 160px;
-        margin-top: 20px;
-    }
-}
-
-/* LINK MEDIOS DE PAGO */
-
-.mp{
-    @include fontsize-padding (30px, 10px);
-}
-
-.mp-img{
-    @include size (500px, 700px);
-}
-
-@media only screen and (max-width: 500px) {
-    .mp-img {
-        @include size (370px, 500px);
-        margin-bottom: 120px;
-    }
-}
-
 
 .h4-p{
     font-size:12px;
@@ -210,6 +135,88 @@ body{
     transform: translate(40px) scale(1);
 }
 
+/* LINK NOSOTROS */
+
+.s-nosotros{
+    @include fontsize-padding (30px, 10px);
+}
+
+.sn-img{
+    @include size (600px, 400px);
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 500px) {
+    .sn-img{
+        @include size (400px, 300px);
+        margin-bottom: 15px;
+    }
+}
+
+.sn-p{
+    @include fontsize-marginleft;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .sn-p{
+        @include fontsize-margin (15px, 10px);
+        margin-bottom: 50px;
+    }
+}
+
+.grid-container-1{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .grid-container-1 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      margin-left: 0px;
+    }
+}
+
+/* LINK UBICACION */
+
+.p-ubicacion{
+    @include fontsize-padding (30px, 10px);
+}
+
+.p-LP{
+    @include fontsize-margin (18px, 10px);
+}
+
+@media only screen and (max-width: 500px) {
+    .mapa{
+        @include size (370px, 450px);
+        margin-bottom: 160px;
+        margin-top: 20px;
+    }
+}
+
+/* LINK MEDIOS DE PAGO */
+
+.mp{
+    @include fontsize-padding (30px, 10px);
+}
+
+.mp-img{
+    @include size (500px, 700px);
+}
+
+@media only screen and (max-width: 500px) {
+    .mp-img {
+        @include size (370px, 500px);
+        margin-bottom: 120px;
+    }
+}
+
+/* NUESTROS PRODUCTOS */
 
 .prod{
     padding: 30px;
@@ -220,6 +227,7 @@ body{
 .cards-in{
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .card-in:hover{
@@ -236,6 +244,20 @@ body{
     width: 170px;
 }
 
+@media only screen and (max-width: 500px) {
+    .cards-in {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      margin-right: 150px;
+      margin-left: 100px;
+      padding: 50px;
+    }
+    .img-in{
+        width: 50px;
+    }
+  }
+
 .img-in{
     display: flex;
     justify-content: center;
@@ -250,71 +272,64 @@ body{
     margin-right: 35px;
 }
 
-.container-comp{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
+/* COMO COMPRAR */
+
+.compras{
     margin-top: 40px;
+}
+
+.compra{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: bisque;
+    margin-bottom: 30px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
-.titulo-comp{
+.compra-h4{
     display: flex;
     justify-content: center;
-    padding: 10px;
 }
 
-.t-comp{
+.compra-p{
     display: flex;
     justify-content: center;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
-.texto-comp{
-    background-color: rgb(250, 192, 254);
-    padding: 64px;
+.compra-texto{
+    margin-left: 35px;
 }
 
-.img-comp{
-    width: 470px;
+.compra-img{
+    width: 450px;
     height: 250px;
 }
 
-
-
-
-
-/*
-.comprar{
-
+@media only screen and (max-width: 500px) {
+    .compra-h4{
+        font-size: 20px;
+    }
+    .compra-img{
+        width: 350px;
+        height: 250px;
+    }
+    .compra-p{
+        @include fontsize-margin (15px, 10px);
+        margin-bottom: 50px;
+    }
+    .compra{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+      }
 }
 
-.card-comp{
-    border: 1px solid rgb(82, 73, 73);
-    background-color: bisque;
-    display: flex;
-    align-items: center;
-}
 
-.img-comp{
-    width: 400px;
-    height: 300px;
-}
 
-.img-comp2{
-    width: 400px;
-    height: 300px;
-    display: flex;
-    justify-self: end;
-}
-
-.t-comp{
-    padding: 30px;
-    font-size: 25px;
-    margin-top: 80px;
-}
-*/
 
 .p-text{
     @include fontsize-marginleft
